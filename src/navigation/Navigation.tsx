@@ -3,7 +3,6 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 import Dashboard from '../screens/loanDashboard';
 import LoanApplication from '../screens/loanApplication';
-import {Platform} from 'react-native';
 
 const Stack = createNativeStackNavigator();
 

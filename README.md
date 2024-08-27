@@ -1,14 +1,33 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Numida App - Notes
+
+This section outlines further development suggestions and improvements that could be made to the application.
+
+Before we get into improvements, here are some visuals of the application as it is.
+
+**_(If you'd like to jump straight to the project setup, [click here (getting started)](#getting-started))_**
+
+## Improvements
+
+- Add a global Error boundary and fallback UI
+- Add componenent documentation, say through Storybook, possibly put together a design system
+- Add pre-commit hooks esp around linting and formatting
+- Improve REST API reporting, a hook that matches the GraphQL query would be nice
+- Use a more sophisticated state management, starting from React Context API
+- Switch to a more robust form validation, possibly React Hook Form
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
 
 First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
 To start Metro, run the following command from the _root_ of your React Native project:
+
+**I recommend using yarn**
 
 ```bash
 # using npm
