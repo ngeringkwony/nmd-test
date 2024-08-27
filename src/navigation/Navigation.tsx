@@ -10,7 +10,7 @@ const Stack = createNativeStackNavigator();
 const Navigation = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: Platform.OS === 'ios'}}>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="Dashboard" component={Dashboard} />
         <Stack.Screen name="LoanApplication" component={LoanApplication} />
       </Stack.Navigator>

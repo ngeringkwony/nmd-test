@@ -11,11 +11,13 @@ import {
 import {useQuery} from '@apollo/client';
 import {GET_LOAN_PRODUCTS} from '../../api/graphql/queries';
 import {useState} from 'react';
+import {LoanProductsQueryResult} from '../../utils/types';
 
 const Home = () => {
   const navigation = useNavigation<NavigationProp<ParamListBase>>();
   const [selectedLoan, setSelectedLoan] = useState<number | null>(null);
-  const {data, loading, error} = useQuery(GET_LOAN_PRODUCTS);
+  const {data, loading, error} =
+    useQuery<LoanProductsQueryResult>(GET_LOAN_PRODUCTS);
 
   return (
     <Container>
@@ -30,7 +32,7 @@ const Home = () => {
           <Text>Error!</Text>
         ) : (
           <FlatList
-            data={data.loanProducts}
+            data={data?.loanProducts}
             renderItem={({item: loan}) => (
               <LoanCard
                 onPress={() => setSelectedLoan(loan.id)}
