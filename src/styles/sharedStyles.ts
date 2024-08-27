@@ -33,10 +33,11 @@ export const Text = styled.Text<{
   width: ${props => props.width || '100%'};
 `;
 
-export const Row = styled.View<{margin?: string}>`
+export const Row = styled.View<{ margin?: string, justifyContent?: string }>`
+  width: 100%;
   flex-direction: row;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: ${props => props.justifyContent || 'space-between'};
   margin: ${props => props.margin || '0 0 0 0'};
 `;
 

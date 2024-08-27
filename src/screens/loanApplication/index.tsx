@@ -1,8 +1,8 @@
 import React, {useMemo, useState} from 'react';
-import {Container, Header, Text} from '../../styles/sharedStyles';
+import {Container, Header, Row, Text} from '../../styles/sharedStyles';
 import TextInput from '../../components/textInput/TextInput';
 import Button from '../../components/button';
-import {ScrollView} from 'react-native';
+import {ActivityIndicator, ScrollView} from 'react-native';
 import {Form, FormField} from './styles';
 import {applyLoan} from '../../api/rest/loanApi';
 
@@ -48,10 +48,20 @@ const Loans = () => {
 
       if (response.success) {
         setSuccess(true);
+        setTimeout(() => {
+          setFullName('');
+          setEmail('');
+          setLoanAmount('');
+          setLoanPurpose('');
+        }, 2000);
       } else {
         setErrors({...errors, submit: response.data.message});
       }
-      setLoading(false);
+      // add delay so the spinner can be seen
+      setTimeout(() => {
+        setLoading(false);
+        setSuccess(false);
+      }, 2000);
       console.log(response);
     }
   };
@@ -126,12 +136,18 @@ const Loans = () => {
         </ScrollView>
       </Form>
 
-      <Button
-        onPress={handleSubmit}
-        title="SUBMIT"
-        size="large"
-        variant="solid"
-      />
+      {loading ? (
+        <Row justifyContent="center">
+          <ActivityIndicator size="large" color="#30c2e3" />
+        </Row>
+      ) : (
+        <Button
+          onPress={handleSubmit}
+          title="SUBMIT"
+          size="large"
+          variant="solid"
+        />
+      )}
       {errors.submit && (
         <Text fontSize={12} align="center" color="red">
           {errors.submit}
