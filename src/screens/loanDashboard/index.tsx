@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <Container>
       <LoansContainer>
-        <Header>Loan Application Dashboard</Header>
+        <Header marginVertical="40px">Loan Application Dashboard</Header>
         <ScrollView>
           <LoanCard
             title="Personal Loan"
