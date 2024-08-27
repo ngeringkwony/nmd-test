@@ -24,10 +24,24 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import styled from 'styled-components/native';
 
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
+
+const StyledButton = styled.TouchableOpacity`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff0033;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-width: 2px;
+  border-color: #fff;
+  border-radius: 10px;
+`;
 
 function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -72,6 +86,9 @@ function App(): React.JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
+        <StyledButton>
+          <Text>CLick me</Text>
+        </StyledButton>
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
