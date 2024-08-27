@@ -9,4 +9,5 @@ export const Header = styled(HeaderText)<{marginVertical?:string}>`
 
 export const LoansContainer = styled.View`
   width: 100%;
+  height: 90%;
 `;

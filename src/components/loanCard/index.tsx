@@ -10,6 +10,7 @@ type Props = {
   maximumAmount: number;
   interestRate: string | number;
   isSelected?: boolean;
+  onPress: () => void;
 };
 
 const View = styled.View<{isSelected?: boolean}>`
@@ -32,32 +33,40 @@ const Title = styled.Text`
   line-height: 23px;
 `;
 
-const LoanCard = ({isSelected, title, maximumAmount, interestRate}: Props) => {
+const LoanCard = ({
+  isSelected,
+  title,
+  maximumAmount,
+  interestRate,
+  onPress,
+}: Props) => {
   return (
-    <View isSelected={isSelected}>
-      <Title>{title}</Title>
-      <Row>
-        <Column>
-          <Text fontSize={10} fontWeight="semibold">
-            Maximum Amount
-          </Text>
-          <Text color="#30C2E3" fontSize={24} fontWeight="bold">
-            ${maximumAmount.toLocaleString()}
-          </Text>
-          <Text fontWeight={isSelected ? 'normal' : 'bold'} fontSize={10}>
-            Interest: {interestRate}%
-          </Text>
-        </Column>
-        <Column>
-          <Button
-            title="Learn More"
-            variant="outline"
-            size="small"
-            accessory={<ArrowRightIcon />}
-          />
-        </Column>
-      </Row>
-    </View>
+    <TouchableOpacity onPress={onPress}>
+      <View isSelected={isSelected}>
+        <Title>{title}</Title>
+        <Row>
+          <Column>
+            <Text fontSize={10} fontWeight="semibold">
+              Maximum Amount
+            </Text>
+            <Text color="#30C2E3" fontSize={24} fontWeight="bold">
+              ${maximumAmount.toLocaleString()}
+            </Text>
+            <Text fontWeight={isSelected ? 'normal' : 'bold'} fontSize={10}>
+              Interest: {interestRate}%
+            </Text>
+          </Column>
+          <Column>
+            <Button
+              title="Learn More"
+              variant="outline"
+              size="small"
+              accessory={<ArrowRightIcon />}
+            />
+          </Column>
+        </Row>
+      </View>
+    </TouchableOpacity>
   );
 };
 
