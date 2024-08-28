@@ -27,6 +27,11 @@ https://github.com/user-attachments/assets/0f9d2e18-79ee-4c14-9873-22ac7d3796a3
 - Use a more sophisticated state management, starting from React Context API
 - Switch to a more robust form validation, possibly React Hook Form
 
+## Possible Issues
+
+- While running the server on localhost/127.0.0.1, Android devices may have a problem with making GraphQL queries, use the device IP + the port as needed
+- On Mac OS port 5000 on the server might be taken by Airdrop, remap to another port, say 5001 in your dockerfile
+
 # Getting Started
 
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
