@@ -2,7 +2,19 @@
 
 This section outlines further development suggestions and improvements that could be made to the application.
 
-Before we get into improvements, here are some visuals of the application as it is.
+Before we get into improvements, here are some visuals of the application as it is:
+
+
+https://github.com/user-attachments/assets/1dc15da6-7eeb-42dc-b618-9381ea165a19
+
+
+
+https://github.com/user-attachments/assets/bf135c1e-ab81-43c0-aec3-4ece0d45fbd9
+
+
+https://github.com/user-attachments/assets/0f9d2e18-79ee-4c14-9873-22ac7d3796a3
+
+
 
 **_(If you'd like to jump straight to the project setup, [click here (getting started)](#getting-started))_**
 
