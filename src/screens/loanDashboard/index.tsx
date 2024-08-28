@@ -1,8 +1,8 @@
 import LoanCard from '../../components/loanCard';
-import {Container, Text} from '../../styles/sharedStyles';
+import {Container, Row, Text} from '../../styles/sharedStyles';
 import {Header, LoansContainer} from './styles';
 import Button from '../../components/button';
-import {FlatList} from 'react-native';
+import {ActivityIndicator, FlatList} from 'react-native';
 import {
   NavigationProp,
   ParamListBase,
@@ -24,12 +24,12 @@ const Home = () => {
       <LoansContainer>
         <Header marginVertical="20px">Loan Application Dashboard</Header>
 
-        {/* TODO: Add a loading state */}
-        {/* TODO: Add an error state */}
         {loading ? (
-          <Text>Loading!</Text>
+          <Row justifyContent="center">
+            <ActivityIndicator size="large" color="#30c2e3" />
+          </Row>
         ) : error ? (
-          <Text>Error!</Text>
+          <Text color="red">Something went wrong!</Text>
         ) : (
           <FlatList
             data={data?.loanProducts}
