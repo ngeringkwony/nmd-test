@@ -2,7 +2,19 @@
 
 This section outlines further development suggestions and improvements that could be made to the application.
 
-Before we get into improvements, here are some visuals of the application as it is.
+Before we get into improvements, here are some visuals of the application as it is:
+
+
+https://github.com/user-attachments/assets/1dc15da6-7eeb-42dc-b618-9381ea165a19
+
+
+
+https://github.com/user-attachments/assets/bf135c1e-ab81-43c0-aec3-4ece0d45fbd9
+
+
+https://github.com/user-attachments/assets/0f9d2e18-79ee-4c14-9873-22ac7d3796a3
+
+
 
 **_(If you'd like to jump straight to the project setup, [click here (getting started)](#getting-started))_**
 
@@ -14,6 +26,11 @@ Before we get into improvements, here are some visuals of the application as it 
 - Improve REST API reporting, a hook that matches the GraphQL query would be nice
 - Use a more sophisticated state management, starting from React Context API
 - Switch to a more robust form validation, possibly React Hook Form
+
+## Possible Issues
+
+- While running the server on localhost/127.0.0.1, Android devices may have a problem with making GraphQL queries, use the device IP + the port as needed
+- On Mac OS port 5000 on the server might be taken by Airdrop, remap to another port, say 5001 in your dockerfile
 
 # Getting Started
 
