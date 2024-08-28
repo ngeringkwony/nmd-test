@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { BASE_URL } from '../constants';
 
 const apiClient = axios.create({
-  baseURL: 'http://192.168.1.9:5001', // Adjust the port if needed
+  baseURL: BASE_URL, 
   headers: {
     'Content-Type': 'application/json',
   },
